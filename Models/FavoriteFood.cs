@@ -1,7 +1,11 @@
-﻿namespace FavoriteThingsAPI.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FavoriteThingsAPI.Models
 {
     public class FavoriteFood
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Protein { get; set; }
         public string Vegetables { get; set; }

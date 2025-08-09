@@ -1,7 +1,11 @@
-﻿namespace FavoriteThingsAPI.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FavoriteThingsAPI.Models
 {
     public class FavoriteSuperheroMedia
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string FavoriteHero { get; set; }
         public string FavoriteVillain { get; set; }
